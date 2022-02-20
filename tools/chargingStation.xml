@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="chargingStation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_chargingStation_snapping</name>
+        <image>$data/placeables/lizard/chargingStation/store_chargingStation.png</image>
+        <functions>
+            <function>$l10n_function_chargingStation</function>
+        </functions>
+        <price>5000</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>placeableMisc</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>tools</tab>
+        </brush>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/lizard/chargingStation/chargingStation.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+
+        <sounds>
+            <place template="smallImp" pitchScale="1.6"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="3|0" widthNode="3|1" heightNode="3|2"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="4|0" widthNode="4|1" heightNode="4|2" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas />
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <chargingStation>
+        <chargeIndicator node="chargeFlash" light="chargeLight"/>
+        <sounds>
+            <fill
+                template="ELECTRIC_CHARGING_STATION" innerRadius="3" outerRadius="30" volumeScale="1" pitchScale="1" >
+            </fill>
+        </sounds>
+    </chargingStation>
+
+    <buyingStation node="chargeTrigger" supportsExtension="false">
+        <loadTrigger triggerNode="chargeTrigger" fillTypes="electricCharge" fillLitersPerSecond="0.13333" autoStart="true" infiniteCapacity="true" startFillText="$l10n_action_startCharging" stopFillText="$l10n_action_stopCharging"/>
+        <fillType name="electricCharge" priceScale="1" />
+    </buyingStation>
+
+    <hotspots>
+        <hotspot type="ELECTRICITY" linkNode="hotspotNode" teleportNode="teleportNode" />
+    </hotspots>
+
+    <i3dMappings>
+        <i3dMapping id="chargeTrigger" node="0>0" />
+        <i3dMapping id="chargeFlash" node="0>1" />
+        <i3dMapping id="chargeLight" node="0>2" />
+        <i3dMapping id="testArea1Start" node="0>5" />
+        <i3dMapping id="testArea1End" node="0>5|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0" />
+        <i3dMapping id="hotspotNode" node="0>7" />
+        <i3dMapping id="teleportNode" node="0>8" />
+        <i3dMapping id="tipCollision" node="0>11" />
+    </i3dMappings>
+</placeable>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="siloExtension" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_liquidManureTankExtensionLarge_snapping</name>
+        <image>$data/placeables/lizard/liquidManureTank/extensionLarge/store_extensionLarge.png</image>
+        <functions>
+            <function>$l10n_function_liquidManureTankExtension</function>
+        </functions>
+        <price>158000</price>
+        <dailyUpkeep>50</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>siloExtensions</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>siloExtensions</tab>
+        </brush>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+
+        <storeIconRendering>
+            <settings cameraXRot="-25" advancedBoundingBox="true" />
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/lizard/liquidManureTank/extensionLarge/extensionLarge.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+            <testArea startNode="testArea3Start" endNode="testArea3End" />
+            <testArea startNode="testArea4Start" endNode="testArea4End" />
+        </testAreas>
+
+        <sounds>
+            <place template="medImp" />
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>
+        <clearArea startNode="clearArea3Start" widthNode="clearArea3Width" heightNode="clearArea3Height"/>
+        <clearArea startNode="clearArea4Start" widthNode="clearArea4Width" heightNode="clearArea4Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+            <levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="asphalt"/>
+            <levelArea startNode="levelArea3Start" widthNode="levelArea3Width" heightNode="levelArea3Height" groundType="asphalt"/>
+            <levelArea startNode="levelArea4Start" widthNode="levelArea4Width" heightNode="levelArea4Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas/>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <siloExtension nearSiloWarning="$l10n_warning_liquidManureTankNotNearBarn">
+        <storage node="storage" fillTypes="LIQUIDMANURE" capacity="2600000" isExtension="true" >
+            <fillPlane fillType="LIQUIDMANURE" node="fillPlane" minY="0" maxY="2.395" />
+        </storage>
+    </siloExtension>
+
+    <i3dMappings>
+        <i3dMapping id="storage" node="0>0|0" />
+        <i3dMapping id="fillPlane" node="0>0|0|0" />
+        <i3dMapping id="clearArea1Start" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|1" />
+        <i3dMapping id="clearArea2Start" node="0>1|1" />
+        <i3dMapping id="clearArea2Width" node="0>1|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>1|1|1" />
+        <i3dMapping id="clearArea3Start" node="0>1|2" />
+        <i3dMapping id="clearArea3Width" node="0>1|2|0" />
+        <i3dMapping id="clearArea3Height" node="0>1|2|1" />
+        <i3dMapping id="clearArea4Start" node="0>1|3" />
+        <i3dMapping id="clearArea4Width" node="0>1|3|0" />
+        <i3dMapping id="clearArea4Height" node="0>1|3|1" />
+        <i3dMapping id="levelArea1Start" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>2|0|1" />
+        <i3dMapping id="levelArea2Start" node="0>2|1" />
+        <i3dMapping id="levelArea2Width" node="0>2|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>2|1|1" />
+        <i3dMapping id="levelArea3Start" node="0>2|2" />
+        <i3dMapping id="levelArea3Width" node="0>2|2|0" />
+        <i3dMapping id="levelArea3Height" node="0>2|2|1" />
+        <i3dMapping id="levelArea4Start" node="0>2|3" />
+        <i3dMapping id="levelArea4Width" node="0>2|3|0" />
+        <i3dMapping id="levelArea4Height" node="0>2|3|1" />
+        <i3dMapping id="testArea1Start" node="0>3|0" />
+        <i3dMapping id="testArea1End" node="0>3|0|0" />
+        <i3dMapping id="testArea2Start" node="0>3|1" />
+        <i3dMapping id="testArea2End" node="0>3|1|0" />
+        <i3dMapping id="testArea3Start" node="0>3|2" />
+        <i3dMapping id="testArea3End" node="0>3|2|0" />
+        <i3dMapping id="testArea4Start" node="0>3|3" />
+        <i3dMapping id="testArea4End" node="0>3|3|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0" />
+    </i3dMappings>
+</placeable>

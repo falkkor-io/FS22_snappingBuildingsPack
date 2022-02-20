@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="weighingStation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_weighingStationSmall_snapping</name>
+        <functions>
+            <function>$l10n_function_weighingstation</function>
+        </functions>
+        <image>$data/placeables/lizard/weighingStation/weighingStationSmall/store_weighingStationSmall.png</image>
+        <price>64000</price>
+        <dailyUpkeep>40</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>silos</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>tools</tab>
+        </brush>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+
+        <storeIconRendering>
+            <settings cameraYRot="-120" />
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/lizard/weighingStation/weighingStationSmall/weighingStationSmall.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+            <testArea startNode="testArea2Start" endNode="testArea2End" />
+        </testAreas>
+
+        <sounds>
+            <place template="medImp" />
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="gravel"/>
+            <levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" groundType="gravel"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height" />
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+        <splines>
+            <spline node="aiSpline" />
+        </splines>
+    </ai>
+
+    <weighingStation triggerNode="weighingTrigger">
+        <display node="displayNode1" font="DIGIT" mask="00000000.0" alignment="RIGHT" size="0.13" emissiveScale="1" color="0.6 0 0 1" hiddenColor="0.05 0.05 0.05 1"/>
+    </weighingStation>
+
+    <lights>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="linkedLight01" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="35 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="linkedLight02" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="35 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/spotlight20W.xml" linkNode="linkedLight03" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="35 0 0" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="linkedLight04" groupIndex="1" />
+
+        <realLights>
+            <low>
+                <light node="realLightsLow" groupIndex="1"/>
+            </low>
+            <high>
+                <light node="realLightsHigh" groupIndex="1"/>
+            </high>
+        </realLights>
+
+        <group name="$l10n_action_placeableLightShed" activateTime="17:30" deactivateTime="8:20"/>
+    </lights>
+
+    <i3dMappings>
+        <i3dMapping id="weighingTrigger" node="0>0|0" />
+        <i3dMapping id="displayNode1" node="0>0|1" />
+        <i3dMapping id="clearArea1Start" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|1" />
+        <i3dMapping id="clearArea2Start" node="0>1|1" />
+        <i3dMapping id="clearArea2Width" node="0>1|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>1|1|1" />
+        <i3dMapping id="levelArea1Start" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>2|0|1" />
+        <i3dMapping id="levelArea2Start" node="0>2|1" />
+        <i3dMapping id="levelArea2Width" node="0>2|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>2|1|1" />
+        <i3dMapping id="indoorArea1Start" node="0>3|0" />
+        <i3dMapping id="indoorArea1Width" node="0>3|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>3|0|1" />
+        <i3dMapping id="testArea1Start" node="0>4|0" />
+        <i3dMapping id="testArea1End" node="0>4|0|0" />
+        <i3dMapping id="testArea2Start" node="0>4|1" />
+        <i3dMapping id="testArea2End" node="0>4|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>5|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>5|0|0" />
+        <i3dMapping id="aiSpline" node="0>6|0" />
+        <i3dMapping id="realLightsLow" node="0>9|0|0" />
+        <i3dMapping id="realLightsHigh" node="0>9|0|1" />
+        <i3dMapping id="linkedLight01" node="0>9|1|0" />
+        <i3dMapping id="linkedLight02" node="0>9|1|1" />
+        <i3dMapping id="linkedLight03" node="0>9|1|2" />
+        <i3dMapping id="linkedLight04" node="0>9|1|3" />
+    </i3dMappings>
+</placeable>

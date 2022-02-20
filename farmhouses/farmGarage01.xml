@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="simplePlaceable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_mapUS_farmGarage_snapping</name>
+        <functions>
+        </functions>
+        <image>$data/placeables/mapUS/farmBuildings/farmGarage/store_farmGarage01.png</image>
+        <canBeSold>true</canBeSold>
+        <showInStore>false</showInStore>
+        <price>50000</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>farmhouses</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>farmhouses</tab>
+        </brush>
+        <vertexBufferMemoryUsage>2780596</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>372492</indexBufferMemoryUsage>
+        <textureMemoryUsage>76387040</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/mapUS/farmBuildings/farmGarage/farmGarage01.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>true</boughtWithFarmland>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End"/>
+        </testAreas>
+    </placement>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling maxSlope="90" maxEdgeAngle="90">
+        <levelAreas >
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" />
+            <!-- <levelArea startNode="levelArea2Start" widthNode="levelArea2Width" heightNode="levelArea2Height" /> -->
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height" />
+    </indoorAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart filename="$data/placeables/mapUS/farmBuildings/farmGarage/attachments.i3d" node="0" linkNode="propsLinkNode" />
+        <dynamicallyLoadedPart filename="$data/placeables/mapUS/farmBuildings/farmGarage/props.i3d"       node="0" linkNode="propsLinkNode" />
+    </dynamicallyLoadedParts>
+
+    <lights>
+        <group activateText="$l10n_action_turnOnLight" deactivateText="$l10n_action_turnOffLight" triggerNode="lightTrigger">
+            <sounds>
+                <toggle template="lizardFloodLight" innerRadius="20" outerRadius="500" volumeScale="0.2"/>
+            </sounds>
+        </group>
+
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight1" />
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight2" />
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight3" />
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight4" />
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight5" />
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight6" />
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight7" />
+
+        <realLights>
+            <low>
+                <light node="realLightsLow" />
+            </low>
+            <high>
+                <light node="realLightsHigh"/>
+            </high>
+        </realLights>
+    </lights>
+
+    <animatedObjects>
+        <animatedObject saveId="slidingDoor" >
+            <animation duration="2.5">
+                <part node="slidingDoor">
+                    <keyFrame time="0.0" translation="0 0 -1.99"/>
+                    <keyFrame time="1.0" translation="0 0 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="slidingDoorTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving linkNode="slidingDoor" template="slidingGateWoodLoop" />
+                <posEnd linkNode="slidingDoor" template="woodDoorOpen" />
+                <negEnd linkNode="slidingDoor" template="woodDoorClose" />
+            </sounds>
+        </animatedObject>
+    </animatedObjects>
+
+    <i3dMappings>
+        <i3dMapping id="clearArea1Start" node="0>0|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>1|0" />
+        <i3dMapping id="levelArea1Width" node="0>1|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>1|0|1" />
+        <i3dMapping id="levelArea2Start" node="0>1|1" />
+        <i3dMapping id="levelArea2Width" node="0>1|1|0" />
+        <i3dMapping id="levelArea2Height" node="0>1|1|1" />
+        <i3dMapping id="indoorArea1Start" node="0>2|0" />
+        <i3dMapping id="indoorArea1Width" node="0>2|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>2|0|1" />
+        <i3dMapping id="testArea1Start" node="0>3|0" />
+        <i3dMapping id="testArea1End" node="0>3|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0" />
+        <i3dMapping id="realLightsLow" node="0>7|0|0" />
+        <i3dMapping id="realLightsHigh" node="0>7|0|1" />
+        <i3dMapping id="pitLight1" node="0>7|1|0" />
+        <i3dMapping id="pitLight2" node="0>7|1|1" />
+        <i3dMapping id="pitLight3" node="0>7|1|2" />
+        <i3dMapping id="pitLight4" node="0>7|1|3" />
+        <i3dMapping id="pitLight5" node="0>7|1|4" />
+        <i3dMapping id="pitLight6" node="0>7|1|5" />
+        <i3dMapping id="pitLight7" node="0>7|1|6" />
+        <i3dMapping id="lightTrigger" node="0>7|2|0" />
+        <i3dMapping id="slidingDoor" node="0>8|0|0" />
+        <i3dMapping id="slidingDoorCol" node="0>8|0|0|0" />
+        <i3dMapping id="slidingDoorTrigger" node="0>8|0|1" />
+        <i3dMapping id="propsLinkNode" node="0>11|0" />
+    </i3dMappings>
+</placeable>

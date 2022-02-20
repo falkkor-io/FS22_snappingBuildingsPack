@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="garageSolarPanels" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_hoermannGarageSolarPanels_snapping</name>
+        <functions>
+            <function>$l10n_function_garageSolarPanels</function>
+        </functions>
+        <image>$data/placeables/rudolfHormann/garageSolarPanels/store_garageSolarPanels.dds</image>
+        <price>152500</price>
+        <dailyUpkeep>110</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>RUDOLFHOERMANN</brand>
+        <species>placeable</species>
+        <category>sheds</category>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/rudolfHormann/garageSolarPanels/garageSolarPanels.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+
+        <sounds>
+            <place template="medImp" />
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea01Start" widthNode="clearArea01Width" heightNode="clearArea01Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="3" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelingArea01Start" widthNode="levelingArea01Width" heightNode="levelingArea01Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea01Start" widthNode="indoorArea01Width" heightNode="indoorArea01Height"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <incomePerHour>20</incomePerHour>
+
+    <i3dMappings>
+        <i3dMapping id="clearArea01Start" node="0>0|0" />
+        <i3dMapping id="clearArea01Width" node="0>0|0|0" />
+        <i3dMapping id="clearArea01Height" node="0>0|0|1" />
+        <i3dMapping id="levelingArea01Start" node="0>1|0" />
+        <i3dMapping id="levelingArea01Width" node="0>1|0|0" />
+        <i3dMapping id="levelingArea01Height" node="0>1|0|1" />
+        <i3dMapping id="indoorArea01Start" node="0>2|0" />
+        <i3dMapping id="indoorArea01Width" node="0>2|0|0" />
+        <i3dMapping id="indoorArea01Height" node="0>2|0|1" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>3|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>3|0|0" />
+        <i3dMapping id="testArea1Start" node="0>4|0" />
+        <i3dMapping id="testArea1End" node="0>4|0|0" />
+    </i3dMappings>
+</placeable>

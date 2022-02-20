@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="simplePlaceable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_hoermannGarageWood_snapping</name>
+        <functions>
+            <function>$l10n_function_garage</function>
+        </functions>
+        <image>$data/placeables/rudolfHormann/garageWoodMid/store_garageWoodMid.dds</image>
+        <price>192000</price>
+        <dailyUpkeep>80</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>RUDOLFHOERMANN</brand>
+        <species>placeable</species>
+        <category>sheds</category>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/rudolfHormann/garageWoodMid/garageWoodMid.i3d</filename>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+        <sounds>
+            <place template="medImp" />
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>
+        <clearArea startNode="clearArea3Start" widthNode="clearArea3Width" heightNode="clearArea3Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="5" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="powerSwitch01"   filename="$data/shared/assets/lights/rudolfHormann/powerSwitch.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="powerSwitch02"   filename="$data/shared/assets/lights/rudolfHormann/powerSwitch.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="powerSwitch03"   filename="$data/shared/assets/lights/rudolfHormann/powerSwitch.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="powerSwitch04"   filename="$data/shared/assets/lights/rudolfHormann/powerSwitch.i3d" />
+    </dynamicallyLoadedParts>
+
+    <lights>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode01" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 -15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode02" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode03" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 -15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode04" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode05" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 -15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode06" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode07" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 -15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode08" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode09" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 -15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode10" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode11" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 -15" />
+        </sharedLight>
+        <sharedLight filename="$data/shared/assets/lights/rudolfHormann/light150.xml" linkNode="lightNode12" groupIndex="1">
+            <rotationNode name="rotationNode01" rotation="0 0 15" />
+        </sharedLight>
+
+        <realLights>
+            <low>
+                <light node="realLightsLow" groupIndex="1"/>
+            </low>
+            <high>
+                <light node="realLightsHigh" groupIndex="1"/>
+            </high>
+        </realLights>
+
+        <group name="$l10n_action_placeableLightShed" triggerNode="lightTrigger">
+            <sounds>
+                <toggle template="lizardFloodLight" innerRadius="50" outerRadius="100" volumeScale="0.2"/>
+            </sounds>
+        </group>
+    </lights>
+
+    <animatedObjects>
+        <animatedObject saveId="slidingDoor1" >
+            <animation duration="3.5">
+                <part node="slidingDoor1">
+                    <keyFrame time="0.0" translation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 0 -7"/>
+                </part>
+            </animation>
+            <controls triggerNode="slidingDoor1Trigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving linkNode="slidingDoor1Sound" template="slidingGateWoodLoop" />
+                <posEnd linkNode="slidingDoor1Sound" template="woodDoorOpen" />
+                <negEnd linkNode="slidingDoor1Sound" template="woodDoorClose" />
+            </sounds>
+        </animatedObject>
+        <animatedObject saveId="slidingDoor2">
+            <animation duration="3.5">
+                <part node="slidingDoor2">
+                    <keyFrame time="0.0" translation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 0 -7"/>
+                </part>
+            </animation>
+            <controls triggerNode="slidingDoor2Trigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving linkNode="slidingDoor2Sound" template="slidingGateWoodLoop" />
+                <posEnd linkNode="slidingDoor2Sound" template="woodDoorOpen" />
+                <negEnd linkNode="slidingDoor2Sound" template="woodDoorClose" />
+            </sounds>
+        </animatedObject>
+        <animatedObject saveId="door1">
+            <animation duration="1.0">
+                <part node="door1">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -120 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="door1Trigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds >
+                <moving linkNode="door1Sound" template="metalDoorsLoop" />
+                <posEnd linkNode="door1Sound" template="metalDoorsOpen" />
+                <negEnd linkNode="door1Sound" template="metalDoorsClose" />
+            </sounds>
+        </animatedObject>
+        <animatedObject saveId="door2">
+            <animation duration="1.0">
+                <part node="door2">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 120 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="door2Trigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds >
+                <moving linkNode="door2Sound" template="metalDoorsLoop" />
+                <posEnd linkNode="door2Sound" template="metalDoorsOpen" />
+                <negEnd linkNode="door2Sound" template="metalDoorsClose" />
+            </sounds>
+        </animatedObject>
+    </animatedObjects>
+
+    <i3dMappings>
+        <i3dMapping id="slidingDoor1" node="0>0|0|0" />
+        <i3dMapping id="slidingDoor1Trigger" node="0>0|0|1" />
+        <i3dMapping id="slidingDoor1Sound" node="0>0|0|2" />
+        <i3dMapping id="slidingDoor2" node="0>0|1|0" />
+        <i3dMapping id="slidingDoor2Trigger" node="0>0|1|1" />
+        <i3dMapping id="slidingDoor2Sound" node="0>0|1|2" />
+        <i3dMapping id="door1" node="0>0|2|0" />
+        <i3dMapping id="door1Trigger" node="0>0|2|1" />
+        <i3dMapping id="door1Sound" node="0>0|2|2" />
+        <i3dMapping id="door2" node="0>0|3|0" />
+        <i3dMapping id="door2Trigger" node="0>0|3|1" />
+        <i3dMapping id="door2Sound" node="0>0|3|2" />
+        <i3dMapping id="clearArea1Start" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|1" />
+        <i3dMapping id="clearArea2Start" node="0>1|1" />
+        <i3dMapping id="clearArea2Width" node="0>1|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>1|1|1" />
+        <i3dMapping id="clearArea3Start" node="0>1|2" />
+        <i3dMapping id="clearArea3Width" node="0>1|2|0" />
+        <i3dMapping id="clearArea3Height" node="0>1|2|1" />
+        <i3dMapping id="levelArea1Start" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>2|0|1" />
+        <i3dMapping id="indoorArea1Start" node="0>3|0" />
+        <i3dMapping id="indoorArea1Width" node="0>3|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>3|0|1" />
+        <i3dMapping id="lightTrigger" node="0>4|0" />
+        <i3dMapping id="lightNode01" node="0>4|1" />
+        <i3dMapping id="lightNode02" node="0>4|2" />
+        <i3dMapping id="lightNode03" node="0>4|3" />
+        <i3dMapping id="lightNode04" node="0>4|4" />
+        <i3dMapping id="lightNode05" node="0>4|5" />
+        <i3dMapping id="lightNode06" node="0>4|6" />
+        <i3dMapping id="lightNode07" node="0>4|7" />
+        <i3dMapping id="lightNode08" node="0>4|8" />
+        <i3dMapping id="lightNode09" node="0>4|9" />
+        <i3dMapping id="lightNode10" node="0>4|10" />
+        <i3dMapping id="lightNode11" node="0>4|11" />
+        <i3dMapping id="lightNode12" node="0>4|12" />
+        <i3dMapping id="realLightsLow" node="0>4|13|0" />
+        <i3dMapping id="realLightsHigh" node="0>4|13|1" />
+        <i3dMapping id="powerSwitch01" node="0>4|14" />
+        <i3dMapping id="powerSwitch02" node="0>4|15" />
+        <i3dMapping id="powerSwitch03" node="0>4|16" />
+        <i3dMapping id="powerSwitch04" node="0>4|17" />
+        <i3dMapping id="testArea1Start" node="0>5|0" />
+        <i3dMapping id="testArea1End" node="0>5|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>6|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>6|0|0" />
+    </i3dMappings>
+</placeable>

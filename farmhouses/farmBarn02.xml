@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="simplePlaceable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_mapUS_farmBarn_snapping</name>
+        <functions>
+        </functions>
+        <image>$data/placeables/mapUS/farmBuildings/farmBarn/store_farmBarn02.png</image>
+        <canBeSold>true</canBeSold>
+        <showInStore>false</showInStore>
+        <price>100000</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>farmhouses</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>farmhouses</tab>
+        </brush>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+
+        <storeIconRendering>
+            <settings cameraXRot="-15" cameraYRot="135" />
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/mapUS/farmBuildings/farmBarn/farmBarn02.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>true</boughtWithFarmland>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End"/>
+            <testArea startNode="testArea2Start" endNode="testArea2End"/>
+        </testAreas>
+    </placement>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>
+        <clearArea startNode="clearArea3Start" widthNode="clearArea3Width" heightNode="clearArea3Height"/>
+        <clearArea startNode="clearArea4Start" widthNode="clearArea4Width" heightNode="clearArea4Height"/>
+    </clearAreas>
+
+    <leveling></leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height" />
+    </indoorAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart filename="$data/placeables/mapUS/farmBuildings/farmBarn/farmSilo01.i3d"   node="0" linkNode="siloLinkNode" />
+        <dynamicallyLoadedPart filename="$data/placeables/mapUS/farmBuildings/farmBarn/attachments.i3d"  node="0" linkNode="propsLinkNode" />
+        <dynamicallyLoadedPart filename="$data/placeables/mapUS/farmBuildings/farmBarn/props.i3d"        node="0" linkNode="propsLinkNode" />
+    </dynamicallyLoadedParts>
+
+    <!-- TODO, currently lights are in props -->
+    <!-- <lights> -->
+        <!-- <group activateText="$l10n_action_turnOnLight" deactivateText="$l10n_action_turnOffLight" triggerNode="lightTrigger"> -->
+            <!-- <sounds> -->
+                <!-- <toggle template="lizardFloodLight" innerRadius="20" outerRadius="500" volumeScale="0.2"/> -->
+            <!-- </sounds> -->
+        <!-- </group> -->
+
+        <!-- <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="pitLight1" /> -->
+
+        <!-- <realLights> -->
+            <!-- <low> -->
+                <!-- <light node="realLightsLow" /> -->
+            <!-- </low> -->
+            <!-- <high> -->
+                <!-- <light node="realLightsHigh"/> -->
+            <!-- </high> -->
+        <!-- </realLights> -->
+    <!-- </lights> -->
+
+    <animatedObjects>
+        <animatedObject saveId="slidingDoorFront" >
+            <animation duration="3" initialTime="3">
+                <part node="gateFrontDoor01">
+                    <keyFrame time="0.03" translation="0 0 0"/>
+                    <keyFrame time="1.0" translation="2 0 0"/>
+                </part>
+                <part node="gateFrontDoor02">
+                    <keyFrame time="0.0" translation="0 0 0"/>
+                    <keyFrame time="0.95" translation="-2 0 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="gateFrontPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving linkNode="gateFront" template="slidingGateWoodLoop" />
+                <posEnd linkNode="gateFront" template="woodDoorOpen" />
+                <negEnd linkNode="gateFront" template="woodDoorClose" />
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="slidingDoorBack" >
+            <animation duration="3" initialTime="3">
+                <part node="gateBackDoor01">
+                    <keyFrame time="0.03" translation="0 0 0"/>
+                    <keyFrame time="1.0" translation="-2 0 0"/>
+                </part>
+                <part node="gateBackDoor02">
+                    <keyFrame time="0.0" translation="0 0 0"/>
+                    <keyFrame time="0.95" translation="2 0 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="gateBackPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving linkNode="gateBack" template="slidingGateWoodLoop" />
+                <posEnd linkNode="gateBack" template="woodDoorOpen" />
+                <negEnd linkNode="gateBack" template="woodDoorClose" />
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="doorFrontTop" >
+            <animation duration="3">
+                <part node="doorFrontTopLeft">
+                    <keyFrame time="0.1" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -175 0"/>
+                </part>
+                <part node="doorFrontTopRight">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="0.9" rotation="0 175 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="doorFrontTopPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving linkNode="doorFrontTop" template="glassDoorLoop" />
+                <negEnd linkNode="doorFrontTop" template="metalDoorsClose" />
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="doorBackTop" >
+            <animation duration="3">
+                <part node="doorBackTopLeft">
+                    <keyFrame time="0.1" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -175 0"/>
+                </part>
+                <part node="doorBackTopRight">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="0.9" rotation="0 175 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="doorBackTopPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving linkNode="doorBackTop" template="glassDoorLoop" />
+                <negEnd linkNode="doorBackTop" template="metalDoorsClose" />
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="slidingDoorSide" >
+            <animation duration="3">
+                <part node="gateSideDoorLeft">
+                    <keyFrame time="0.03" translation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 0 -1.93"/>
+                </part>
+                <part node="gateSideDoorRight">
+                    <keyFrame time="0.0" translation="0 0 0"/>
+                    <keyFrame time="0.95" translation="0 0 1.93"/>
+                </part>
+            </animation>
+            <controls triggerNode="gateSidePlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving linkNode="gateSide" template="slidingGateWoodLoop" />
+                <posEnd linkNode="gateSide" template="woodDoorOpen" />
+                <negEnd linkNode="gateSide" template="woodDoorClose" />
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="slidingDoorBasement" >
+            <animation duration="3">
+                <part node="gateBasementLeft">
+                    <keyFrame time="0.08" translation="0 0 0"/>
+                    <keyFrame time="1.0" translation="0 0 -1.5"/>
+                </part>
+                <part node="gateBasementRight">
+                    <keyFrame time="0.0" translation="0 0 0"/>
+                    <keyFrame time="0.97" translation="0 0 1.5"/>
+                </part>
+            </animation>
+            <controls triggerNode="gateBasementPlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openGate" negText="action_closeGate" />
+            <sounds>
+                <moving linkNode="gateBasement" template="slidingGateWoodLoop" />
+                <posEnd linkNode="gateBasement" template="woodDoorOpen" />
+                <negEnd linkNode="gateBasement" template="woodDoorClose" />
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="doorSide1" >
+            <animation duration="3">
+                <part node="doorSide1DoorLeft">
+                    <keyFrame time="0.1" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -145 0"/>
+                </part>
+                <part node="doorSide1DoorRight">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="0.9" rotation="0 145 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="doorSide1PlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving linkNode="doorSide1" template="glassDoorLoop" />
+                <negEnd linkNode="doorSide1" template="metalDoorsClose" />
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="doorSide2" >
+            <animation duration="3">
+                <part node="doorSide2DoorLeft">
+                    <keyFrame time="0.1" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 -170 0"/>
+                </part>
+                <part node="doorSide2DoorRight">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="0.9" rotation="0 165 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="doorSide2PlayerTrigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving linkNode="doorSide2" template="glassDoorLoop" />
+                <negEnd linkNode="doorSide2" template="metalDoorsClose" />
+            </sounds>
+        </animatedObject>
+    </animatedObjects>
+
+    <i3dMappings>
+        <i3dMapping id="clearArea1Start" node="0>0|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|0|1" />
+        <i3dMapping id="clearArea2Start" node="0>0|1" />
+        <i3dMapping id="clearArea2Width" node="0>0|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>0|1|1" />
+        <i3dMapping id="clearArea3Start" node="0>0|2" />
+        <i3dMapping id="clearArea3Width" node="0>0|2|0" />
+        <i3dMapping id="clearArea3Height" node="0>0|2|1" />
+        <i3dMapping id="clearArea4Start" node="0>0|3" />
+        <i3dMapping id="clearArea4Width" node="0>0|3|0" />
+        <i3dMapping id="clearArea4Height" node="0>0|3|1" />
+        <i3dMapping id="indoorArea1Start" node="0>2|0" />
+        <i3dMapping id="indoorArea1Width" node="0>2|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>2|0|1" />
+        <i3dMapping id="testArea1Start" node="0>3|0" />
+        <i3dMapping id="testArea1End" node="0>3|0|0" />
+        <i3dMapping id="testArea2Start" node="0>3|1" />
+        <i3dMapping id="testArea2End" node="0>3|1|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0" />
+        <i3dMapping id="gateFront" node="0>6|0" />
+        <i3dMapping id="gateFrontDoor01" node="0>6|0|0" />
+        <i3dMapping id="gateFrontDoor02" node="0>6|0|1" />
+        <i3dMapping id="gateFrontPlayerTrigger" node="0>6|0|2" />
+        <i3dMapping id="gateBack" node="0>6|1" />
+        <i3dMapping id="gateBackDoor01" node="0>6|1|0" />
+        <i3dMapping id="gateBackDoor02" node="0>6|1|1" />
+        <i3dMapping id="gateBackPlayerTrigger" node="0>6|1|2" />
+        <i3dMapping id="doorFrontTop" node="0>6|2" />
+        <i3dMapping id="doorFrontTopRight" node="0>6|2|0" />
+        <i3dMapping id="doorFrontTopLeft" node="0>6|2|1" />
+        <i3dMapping id="doorFrontTopPlayerTrigger" node="0>6|2|2" />
+        <i3dMapping id="doorBackTop" node="0>6|3" />
+        <i3dMapping id="doorBackTopLeft" node="0>6|3|0" />
+        <i3dMapping id="doorBackTopRight" node="0>6|3|1" />
+        <i3dMapping id="doorBackTopPlayerTrigger" node="0>6|3|2" />
+        <i3dMapping id="gateSide" node="0>6|4" />
+        <i3dMapping id="gateSideDoorLeft" node="0>6|4|0" />
+        <i3dMapping id="gateSideDoorRight" node="0>6|4|1" />
+        <i3dMapping id="gateSidePlayerTrigger" node="0>6|4|2" />
+        <i3dMapping id="doorSide1" node="0>6|5" />
+        <i3dMapping id="doorSide1DoorLeft" node="0>6|5|0" />
+        <i3dMapping id="doorSide1DoorRight" node="0>6|5|1" />
+        <i3dMapping id="doorSide1PlayerTrigger" node="0>6|5|2" />
+        <i3dMapping id="doorSide2" node="0>6|6" />
+        <i3dMapping id="doorSide2DoorLeft" node="0>6|6|0" />
+        <i3dMapping id="doorSide2DoorRight" node="0>6|6|1" />
+        <i3dMapping id="doorSide2PlayerTrigger" node="0>6|6|2" />
+        <i3dMapping id="gateBasement" node="0>6|7" />
+        <i3dMapping id="gateBasementLeft" node="0>6|7|0" />
+        <i3dMapping id="gateBasementRight" node="0>6|7|1" />
+        <i3dMapping id="gateBasementPlayerTrigger" node="0>6|7|2" />
+        <i3dMapping id="siloLinkNode" node="0>10|0" />
+        <i3dMapping id="propsLinkNode" node="0>10|1" />
+    </i3dMappings>
+</placeable>

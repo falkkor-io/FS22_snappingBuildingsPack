@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="63">
+    <author>Falkkor</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Snapping Buildings Pack</en>
+    </title>
+    <description>
+        <en><![CDATA[This mod pack for Farming Simulator 22 features the base game buildings but set to snap at 45 degree angle rotations only. Now you can finally achieve perfectly straight building placement on your farm!
+        Included in this pack are ALL base game buildings: 
+
+            - Sheds:
+                - Big Garage
+                - Big Garage with Vehicle Workshop
+                - Garage with Vehicle Workshop
+                - Garage for Contractors
+                - Bulk Hall
+                - Small Garage
+                - Shelter with Solar Roof
+                - Big Wooden Garage
+                - Open Wooden Garage
+                - Variko
+                - Farm Barn
+                - Shelter with Backwall
+                - Shelter without Front
+                - Hay Shed
+                - Large Shelter
+
+            - Silos:
+                - Hay Loft
+                - Farma 400 + OBI 1000
+                - Farma 500 + OBI 1000
+                - Farma 800 + OBI 1000
+                - Flat Bottom Bin 360B
+                - Flat Bottom Bin 3609
+                - NL16-22 - 2000
+                - NL16-22 - 6000
+                - NL16-22 - 16000
+                - Manure Heap
+                - Liquidmanure Tank
+                - Bunkersilo Small 6M X 31M
+                - Bunkersilo Medium 8M X 39M
+                - Bunkersilo Medium 12M X 28M 
+                - Bunkersilo Large 12M X 58M
+                - Bunkersilo Large 25M X 34M
+     
+            - Silo Extensions:
+                - Farma 100
+                - Farma 150
+                - Farma 200
+                - Farma 250
+                - Manure Heap Extension
+                - Liquidmanure Extension Tank Small
+                - Liquidmanure Extension Tank Large
+                - Supplementary Watertank
+
+            - Containers:
+                - Small Petrol Tank
+                - Medium Petrol Tank
+                - Large Petrol Tank
+                - Meridian Large Petrol Tank
+                - Liquid Fertilizer Tank
+                - Stainless Steel Fertilizer Tank
+                - Karma 16
+                - Water Tank
+
+            - Tools:
+                - HDS 9/18-4 M 
+                - IMETOS 3.3
+                - Vehicle Workshop
+                - Electric Charging Station
+                - BioMethane Station
+                - Small Weighing Station
+                - Large Weighing Station
+                
+            - Farmhouses:
+                - Farm House US 
+                - Farm House EU
+                - Farm House FR
+                - Farm Garage US
+                - Farm Garage EU
+                - Farm Barn US
+                - Mobile Farm House
+                - 
+        ]]></en>
+    </description>
+    <iconFilename>store_snappingBuildingsPack.png</iconFilename>
+    <multiplayer supported="true" />
+    <storeItems>
+        <storeItem xmlFilename="sheds/cargoHangarBig.xml"/>
+        <storeItem xmlFilename="sheds/easyShed01.xml"/>
+        <storeItem xmlFilename="sheds/easyShed02.xml"/>
+        <storeItem xmlFilename="sheds/easyShed03.xml"/>
+        <storeItem xmlFilename="sheds/garageBig.xml"/>
+        <storeItem xmlFilename="sheds/garageBigService.xml"/>
+        <storeItem xmlFilename="sheds/garageBigStorageService.xml"/>
+        <storeItem xmlFilename="sheds/garageContractor.xml"/>
+        <storeItem xmlFilename="sheds/garageSmall.xml"/>
+        <storeItem xmlFilename="sheds/garageSolarPanels.xml"/>
+        <storeItem xmlFilename="sheds/garageWoodMid.xml"/>
+        <storeItem xmlFilename="sheds/garageWoodRoof.xml"/>
+        <storeItem xmlFilename="sheds/bgaHall.xml"/>
+        <storeItem xmlFilename="sheds/oldBarn.xml"/>
+        <storeItem xmlFilename="sheds/variko.xml"/>
+
+        <storeItem xmlFilename="silos/baseTank.xml"/>
+        <storeItem xmlFilename="silos/bgaBunkerSilo.xml"/>
+        <storeItem xmlFilename="silos/bunkerSiloBGA.xml"/>
+        <storeItem xmlFilename="silos/bunkerSiloLarge.xml"/>
+        <storeItem xmlFilename="silos/bunkerSiloMedium.xml"/>
+        <storeItem xmlFilename="silos/bunkerSiloSmall.xml"/>
+        <storeItem xmlFilename="silos/farma400.xml"/>
+        <storeItem xmlFilename="silos/farma500.xml"/>
+        <storeItem xmlFilename="silos/farma800.xml"/>
+        <storeItem xmlFilename="silos/flatBottomBin3608.xml"/>
+        <storeItem xmlFilename="silos/flatBottomBin3609.xml"/>
+        <storeItem xmlFilename="silos/hayLoft.xml"/>
+        <storeItem xmlFilename="silos/manureHeap.xml"/>
+        <storeItem xmlFilename="silos/nl1622_16000.xml"/>
+        <storeItem xmlFilename="silos/nl1622_2000.xml"/>
+        <storeItem xmlFilename="silos/nl1622_6000.xml"/>
+
+        <storeItem xmlFilename="siloextensions/extensionLarge.xml"/>
+        <storeItem xmlFilename="siloextensions/extensionSmall.xml"/>
+        <storeItem xmlFilename="siloextensions/farma100.xml"/>
+        <storeItem xmlFilename="siloextensions/farma150.xml"/>
+        <storeItem xmlFilename="siloextensions/farma200.xml"/>
+        <storeItem xmlFilename="siloextensions/farma250.xml"/>
+        <storeItem xmlFilename="siloextensions/manureHeapExtension.xml"/>
+        <storeItem xmlFilename="siloextensions/waterTankLevel01.xml"/>
+
+        <storeItem xmlFilename="containers/dieselTanksLevel01.xml"/>
+        <storeItem xmlFilename="containers/dieselTanksLevel02.xml"/>
+        <storeItem xmlFilename="containers/dieselTanksLevel03.xml"/>
+        <storeItem xmlFilename="containers/fertilizerBins1620.xml"/>
+        <storeItem xmlFilename="containers/fuelTank25000L.xml"/>
+        <storeItem xmlFilename="containers/karma16.xml"/>
+        <storeItem xmlFilename="containers/liquidFlatBottomTank1630.xml"/>
+        <storeItem xmlFilename="containers/waterTankLevel02.xml"/>
+
+        <storeItem xmlFilename="tools/biogasStation.xml"/>
+        <storeItem xmlFilename="tools/chargingStation.xml"/>
+        <storeItem xmlFilename="tools/hds9184M.xml"/>
+        <storeItem xmlFilename="tools/imetosIMT300.xml"/>
+        <storeItem xmlFilename="tools/weighingStationLarge.xml"/>
+        <storeItem xmlFilename="tools/weighingStationSmall.xml"/>
+        <storeItem xmlFilename="tools/workshop.xml"/>
+
+        <storeItem xmlFilename="farmhouses/farmBarn02.xml"/>
+        <storeItem xmlFilename="farmhouses/farmBuilding.xml"/>
+        <storeItem xmlFilename="farmhouses/farmGarage.xml"/>
+        <storeItem xmlFilename="farmhouses/farmGarage01.xml"/>
+        <storeItem xmlFilename="farmhouses/farmHouse.xml"/>
+        <storeItem xmlFilename="farmhouses/farmHouse02.xml"/>
+        <storeItem xmlFilename="farmhouses/mobileHome.xml"/>
+    </storeItems>
+    <l10n>
+        <text name="storeItem_hoermannCargoHangar_snapping"><en>Bulk Hall (Snapping)</en></text>
+        <text name="storeItem_easyShed01_snapping"><en>Shelter with Backwall (Snapping)</en></text>
+        <text name="storeItem_easyShed02_snapping"><en>Shelter without Front (Snapping)</en></text>
+        <text name="storeItem_easyShed03_snapping"><en>Hay Shed (Snapping)</en></text>
+        <text name="storeItem_planET_bgaHall_snapping"><en>Large Shelter (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageBig_snapping"><en>Big Garage (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageBigService_snapping"><en>Big Garage with Vehicle Workshop (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageService_snapping"><en>Garage with Vehicle Workshop (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageContractor_snapping"><en>Garage for Contractors (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageSmall_snapping"><en>Small Garage (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageSolarPanels_snapping"><en>Shelter with Solar Roof (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageWood_snapping"><en>Big Wooden Garage (Snapping)</en></text>
+        <text name="storeItem_hoermannGarageWoodRoof_snapping"><en>Open Wooden Garage (Snapping)</en></text>
+        <text name="storeItem_liquidManureTank_snapping"><en>Liquidmanure Tank (Snapping)</en></text>
+        <text name="storeItem_planet_bunkerSiloLarge_snapping"><en>Bunkersilo Large 25M X 34M (Snapping)</en></text>
+        <text name="storeItem_alpine_bunkerSiloMedium_snapping"><en>Bunkersilo Medium 12M X 28M (Snapping)</en></text>
+        <text name="storeItem_bunkerSiloLarge_snapping"><en>Bunkersilo Large 12M X 58M (Snapping)</en></text>
+        <text name="storeItem_bunkerSiloMedium_snapping"><en>Bunkersilo Medium 8M X 39M (Snapping)</en></text>
+        <text name="storeItem_bunkerSiloSmall_snapping"><en>Bunkersilo Small 6M X 31M (Snapping)</en></text>
+        <text name="shopItem_hayLoft_snapping"><en>Hay Loft (Snapping)</en></text>
+        <text name="manureHeap_snapping"><en>Manure Heap (Snapping)</en></text>
+        <text name="storeItem_liquidManureTankExtensionLarge_snapping"><en>Liquidmanure Extension Tank Large (Snapping)</en></text>
+        <text name="storeItem_liquidManureTankExtensionSmall_snapping"><en>Liquidmanure Extension Tank Small (Snapping)</en></text>
+        <text name="storeItem_waterTank01_snapping"><en>Supplementary Watertank (Snapping)</en></text>
+        <text name="storeItem_dieselTank01_snapping"><en>Small Petrol Tank (Snapping)</en></text>
+        <text name="storeItem_dieselTank02_snapping"><en>Medium Petrol Tank (Snapping)</en></text>
+        <text name="storeItem_dieselTank03_snapping"><en>Large Petrol Tank (Snapping)</en></text>
+        <text name="shopItem_meridianFertilizerTank_snapping"><en>Stainless Steel Fertilizer Tank (Snapping)</en></text>
+        <text name="shopItem_liquidFertilizerTank_snapping"><en>Liquid Fertilizer Tank (Snapping)</en></text>
+        <text name="storeItem_waterTank02_snapping"><en>Water Tank (Snapping)</en></text>
+        <text name="shopItem_biogasStation_snapping"><en>BioMethane Station (Snapping)</en></text>
+        <text name="shopItem_chargingStation_snapping"><en>Electric Charging Station (Snapping)</en></text>
+        <text name="storeItem_weighingStationLarge_snapping"><en>Large Weighing Station (Snapping)</en></text>
+        <text name="storeItem_weighingStationSmall_snapping"><en>Small Weighing Station (Snapping)</en></text>
+        <text name="shopItem_workshop_snapping"><en>Vehicle Workshop (Snapping)</en></text>
+        <text name="storeItem_mapUS_farmBarn_snapping"><en>Farm Barn US (Snapping)</en></text>
+        <text name="object_farmhouse_snapping"><en>Farm House FR (Snapping)</en></text>
+        <text name="shopItem_farmGarage_snapping"><en>Farm Garage EU (Snapping)</en></text>
+        <text name="storeItem_mapUS_farmGarage_snapping"><en>Farm Garage US (Snapping)</en></text>
+        <text name="object_farmhouse_eu_snapping"><en>Farm House EU (Snapping)</en></text>
+        <text name="object_farmhouse_us_snapping"><en>Farm House US (Snapping)</en></text>
+        <text name="object_farmhouse_mobile_snapping"><en>Mobile Farm House (Snapping)</en></text>
+	</l10n>
+</modDesc>

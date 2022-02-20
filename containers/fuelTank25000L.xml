@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="silo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_storeItem_dieselTank03_snapping</name>
+        <image>$data/placeables/meridian/fuelTank25000L/store_fuelTank25000L.png</image>
+        <functions>
+            <function>$l10n_function_dieselTank</function>
+        </functions>
+        <price>26500</price>
+        <dailyUpkeep>100</dailyUpkeep>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>MERIDIAN</brand>
+        <species>placeable</species>
+        <category>dieselTanks</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>containers</tab>
+        </brush>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/meridian/fuelTank25000L/fuelTank25000L.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+
+        <sounds>
+            <place template="siloImp" pitchScale="1.4"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas/>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <triggerMarkers>
+        <triggerMarker node="loadingMarker"       filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="refillTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" />
+    </triggerMarkers>
+
+    <hotspots>
+        <hotspot type="FUEL" linkNode="mapPosition" />
+    </hotspots>
+
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <silo playerActionTrigger="refillPlayerTrigger">
+        <loadingStation node="loadingTrigger" supportsExtension="false" >
+            <loadTrigger triggerNode="loadingTrigger" fillLitersPerSecond="20" dischargeNode="dischargeNode" fillTypes="DIESEL"/>
+        </loadingStation>
+
+        <unloadingStation supportsExtension="false" >
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="DIESEL"/>
+        </unloadingStation>
+
+        <storages>
+            <storage node="storage" fillTypes="DIESEL" capacity="25000" isExtension="false">
+                <startFillLevel fillType="DIESEL" fillLevel="0" />
+            </storage>
+        </storages>
+    </silo>
+
+    <i3dMappings>
+        <i3dMapping id="storage" node="0>0|0" />
+        <i3dMapping id="mapPosition" node="0>0|1" />
+        <i3dMapping id="exactFillRootNode" node="0>0|2|0" />
+        <i3dMapping id="loadingTrigger" node="0>0|3|0" />
+        <i3dMapping id="dischargeNode" node="0>0|3|1" />
+        <i3dMapping id="loadingMarker" node="0>0|3|2" />
+        <i3dMapping id="infoTrigger" node="0>0|4" />
+        <i3dMapping id="refillPlayerTrigger" node="0>0|5" />
+        <i3dMapping id="refillTriggerMarker" node="0>0|5|0" />
+        <i3dMapping id="clearArea1Start" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>2|0|1" />
+        <i3dMapping id="testArea1Start" node="0>3|0" />
+        <i3dMapping id="testArea1End" node="0>3|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>4|0|0" />
+        <i3dMapping id="fuelTank25000L" node="0>6|0|3" />
+    </i3dMappings>
+</placeable>

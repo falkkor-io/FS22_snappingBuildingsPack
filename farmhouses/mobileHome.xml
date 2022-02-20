@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="farmhouse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_object_farmhouse_mobile_snapping</name>
+        <functions>
+            <function>$l10n_function_farmHouse</function>
+        </functions>
+        <image>$data/placeables/lizard/mobileHome/mobileHome.png</image>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <price>20000</price>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>farmhouses</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>farmhouses</tab>
+        </brush>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+
+        <storeIconRendering>
+            <settings cameraXRot="-20" cameraYRot="-60" />
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <filename>$data/placeables/lizard/mobileHome/mobileHome.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" placementRotationSnapAngle="45" placementPositionSnapSize="0.5" >
+        <testAreas>
+            <testArea startNode="testAreaStart" endNode="testAreaEnd"/>
+        </testAreas>
+
+        <sounds>
+            <place template="medImp" />
+        </sounds>
+    </placement>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart" endNode="tipOcclusionUpdateAreaEnd" />
+    </tipOcclusionUpdateAreas>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+        <clearArea startNode="clearArea2Start" widthNode="clearArea2Width" heightNode="clearArea2Height"/>
+    </clearAreas>
+
+    <leveling>
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" />
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height" />
+    </indoorAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart" endNode="tipOcclusionUpdateAreaEnd" />
+        </updateAreas>
+    </ai>
+
+    <hotspots>
+        <hotspot type="FARM" linkNode="0>" teleportNode="spawnPoint" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="sleepTriggerMarker"    filename="$data/shared/assets/marker/markerIcons.xml" id="EXCLAMATION_MARK"/>
+    </triggerMarkers>
+
+    <lights>
+        <group weatherRequiredFlags="NIGHT" />
+
+        <lightShape node="interiorDay" />
+
+        <realLights>
+            <high>
+                <light node="realLights" />
+            </high>
+        </realLights>
+    </lights>
+
+    <farmhouse spawnNode="spawnPoint">
+        <sleeping triggerNode="sleepingTrigger" cameraNode="sleepCamera"/>
+    </farmhouse>
+
+    <i3dMappings>
+        <i3dMapping id="clearArea1Start" node="0>0|0" />
+        <i3dMapping id="clearArea1Width" node="0>0|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>0|0|1" />
+        <i3dMapping id="clearArea2Start" node="0>0|1" />
+        <i3dMapping id="clearArea2Width" node="0>0|1|0" />
+        <i3dMapping id="clearArea2Height" node="0>0|1|1" />
+        <i3dMapping id="levelArea1Start" node="0>1|0" />
+        <i3dMapping id="levelArea1Width" node="0>1|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>1|0|1" />
+        <i3dMapping id="testAreaStart" node="0>2|0" />
+        <i3dMapping id="testAreaEnd" node="0>2|0|0" />
+        <i3dMapping id="indoorArea1Start" node="0>3|0" />
+        <i3dMapping id="indoorArea1Width" node="0>3|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>3|0|1" />
+        <i3dMapping id="interiorDay" node="0>4|0|0|3|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaStart" node="0>6" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd" node="0>6|0" />
+        <i3dMapping id="sleepCamera" node="0>8|0" />
+        <i3dMapping id="sleepTriggerMarker" node="0>8|1" />
+        <i3dMapping id="sleepingTrigger" node="0>8|2" />
+        <i3dMapping id="spawnPoint" node="0>8|3" />
+        <i3dMapping id="realLights" node="0>9" />
+    </i3dMappings>
+</placeable>
