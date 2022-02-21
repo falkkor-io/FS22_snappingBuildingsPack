@@ -81,7 +81,9 @@ Included in this pack are ALL base game buildings:
     - Farm Garage EU
     - Farm Barn US
     - Mobile Farm House
+```
 
+```
 Changelog:
     - v1.0.0.0 
         - GitHub Release
