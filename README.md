@@ -1,5 +1,7 @@
 ## This mod pack for Farming Simulator 22 features the base game buildings but set to snap at 45 degree angle rotations only. Now you can finally achieve perfectly straight building placement on your farm!
 
+![Snapping Buildings Pack Screenshot](/screenshots/snapping_buildings_screen1.jpg)
+
 ```
 Included in this pack are ALL base game buildings:
 
